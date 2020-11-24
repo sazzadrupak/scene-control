@@ -1,0 +1,26 @@
+body {
+  background-color: #06113B;
+  color: aliceblue;
+}
+
+.card {
+  background-color: #06113B;
+  border: 1px solid;
+}
+
+.card-col {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.row {
+  margin: 20px 0 20px 0;
+}
+
+.card-custom {
+  min-width: 128px;
+}
+
+.card-footer {
+  padding: 0px !important;
+}

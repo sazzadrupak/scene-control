@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  client:
+    container_name: client
+    stdin_open: true
+    ports:
+      - '3000:3000'
+    build:
+      dockerfile: Dockerfile
+      context: ./front-end
+    volumes:
+      - '/app/node_modules'
+      - './front-end:/app'
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_API_KEY=${REACT_APP_API_KEY}
+    networks:
+      - webnet
+networks:
+  webnet:
