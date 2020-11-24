@@ -26,11 +26,20 @@ Types of data fetched from server:
   - Font awesome icon [Free icons list](https://fontawesome.com/)
 
 
-## How to run project
+## How to run project with docker
   - Clone this repo
-  - Go to the projects' root folder where `docker-compose.yaml` file presents
+  - Go to the projects' root folder where `docker-compose.yaml` file presents in terminal
   - Run this command `docker-compose up --build` and wait until the application build and run successfully. After the success build, the application will run in 3000 port of your system.
   - Go to this url `localhost:3000` from your browser. You can see the application with a header name and couple of cards which are scenes item.
+
+## How to run project locally
+  - Check if the `3000` port is free and not used by other application in your system
+  - Clone this repo
+  - Go to the front-end directory from the project directory in terminal
+  - Run this command to install the dependency `yarn install` or `npm install` based on which one you have installed in your system.
+  - Run this command to run the application `yarn run start` or `npm run start`
+  - You will be redirected to the application url `localhost:3000` automatically
+  - (N.B. You might not see anything in the application page. The reason would be the repo is missing `.env` file which has the api key of Mount Kelvin server). My recommendation would be to use docker to run the application.
 
 ## Issues
   In the API documentation of [Mount Kalvin](https://mountkelvin.github.io/api/), I could not get the idea what will happen after `apply/scene` call using socket emit. So, to make a visually understandable, I made the scene item as a switch, you can click the scene swith, after the click you will see the icon of that specific scene switch will be changed and go to previous icon again. This gives you the idea that you have clicked a scene switch and something happened in the server.
